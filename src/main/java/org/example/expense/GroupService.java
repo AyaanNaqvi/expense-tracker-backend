@@ -37,11 +37,11 @@ this.debtservice = debtservice;
 @Transactional
 public void deleteGroups(long groupId) {
     System.out.println("deleted " + groupId);
-    debtservice.deletedebt(groupId);
     expensesplitrepos.deleteByExpense_Groups_Id(groupId);
     expenserepository.deleteByGroups_Id(groupId);
     grprep.deleteByGroup_Id(groupId);
-
+    debtservice.deletedebt(groupId);
+    groupsrep.deleteById(groupId);
 
 
     groupsrep.deleteById(groupId);
