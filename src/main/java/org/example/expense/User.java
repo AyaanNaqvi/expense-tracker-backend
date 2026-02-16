@@ -1,13 +1,11 @@
 package org.example.expense;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Entity
+@Table(name = "users")
 public class User{
     @Id
     @GeneratedValue
